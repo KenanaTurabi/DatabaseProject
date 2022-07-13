@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cardinfo" prefHeight="459.0" prefWidth="363.0" style="-fx-background-color: #20117d;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.cardinfoCintroller">
+   <children>
+      <ImageView fx:id="showinfoimage" fitHeight="150.0" fitWidth="176.0" layoutX="95.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="showinfoname" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="163.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="163.0" prefHeight="33.0" prefWidth="61.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="showinfoprice" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="220.0" prefHeight="33.0" prefWidth="220.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="220.0" prefHeight="33.0" prefWidth="61.0" text="Price" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="270.0" prefHeight="33.0" prefWidth="61.0" text="Disc." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="showinfodisc" layoutX="84.0" layoutY="263.0" prefHeight="77.0" prefWidth="262.0" style="-fx-text-inner-color: #ff0000;" />
+      <JFXButton layoutX="139.0" layoutY="406.0" onAction="#buy" prefHeight="25.0" prefWidth="93.0" stylesheets="@style.css" text="Buy" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="inside-btn" />
+            <String fx:value="inside-btn-color" />
+         </styleClass>
+      </JFXButton>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="316.0" layoutY="217.0" prefHeight="39.0" prefWidth="28.0" text="\$" textFill="#1aab00">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="showinfotime" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="366.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="366.0" prefHeight="33.0" prefWidth="61.0" text="Time" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="showsend" layoutX="285.0" layoutY="399.0" onAction="#showsendmsg" prefHeight="40.0" prefWidth="45.0" styleClass="send_msgBtn" stylesheets="@style.css" text="showsend" />
+   </children>
+</AnchorPane>

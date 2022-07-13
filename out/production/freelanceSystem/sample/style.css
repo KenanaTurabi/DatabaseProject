@@ -1,0 +1,238 @@
+.mouse-moved:hover{
+-fx-background-color: #0013ba;
+}
+.mouse-clicked:pressed{
+-fx-background-color: #a100e0;
+}
+.login-btn:hover{
+-fx-background-color: #426478;
+}
+.login-btn-color{
+-fx-background-color: #212021;
+}
+.forgotpass:hover{
+-fx-background-color: #f51d1d;
+}
+.backbtn:hover{
+-fx-background-color:#fa0000;
+}
+.backbtn-color{
+-fx-background-image: url("back_64px.png");
+-fx-background-repeat: stretch;
+-fx-background-size : 50 40;
+-fx-background-position: center center;
+}
+.addnewservicebtn-image{
+-fx-background-image: url("addnewservice.png");
+-fx-background-repeat: stretch;
+-fx-background-size : 80 60;
+-fx-background-position: center center;
+}
+
+.logoutbtn-image{
+-fx-background-image: url("logout_rounded_left_100px.png");
+-fx-background-repeat: stretch;
+-fx-background-size : 100 100;
+-fx-background-position: center center;
+}
+.admin-pane{
+-fx-background-image: url("adminimage.jpg");
+-fx-background-repeat: stretch;
+-fx-background-size :700 400;
+
+-fx-background-position: center center;
+}
+.admin-panehover:hover{
+-fx-background-color:#9c27b0;
+
+
+}
+
+
+.inside-btn-color{
+-fx-background-color: #13123A;
+-fx-background-radius:30;
+}
+.inside-btn:hover{
+-fx-background-color:#0013ba;
+}
+.deleteAndaccept:hover{
+-fx-background-color: #245b6b;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+.table-row-cell:odd{
+    -fx-background-color: #a8b0b3;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+.table-row-cell:even{
+    -fx-background-color: #245b6b;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+.Back:hover{
+-fx-background-color: #a8b0b3;
+}
+.ViewMssg:hover{
+-fx-background-color: #f52f8e;
+}
+.send_msgBtn{
+-fx-background-image: url("sendMsg.png");
+-fx-background-repeat: stretch;
+-fx-background-size :48 48;
+-fx-background-position: center center;
+}
+
+.send_msgBtn1{
+-fx-background-image: url("send_40px.png");
+-fx-background-repeat: stretch;
+-fx-background-size :80 80;
+-fx-background-position: center center;
+}
+
+.sendMsg-closeBtn{
+-fx-background-image: url("cancel_48px.png");
+-fx-background-repeat: stretch;
+-fx-background-size :30 30 ;
+-fx-background-position: center center;
+}
+.mouse-moved:hover{
+-fx-background-color: #0013ba;
+}
+.mouse-clicked:pressed{
+-fx-background-color: #a100e0;
+}
+.login-btn:hover{
+-fx-background-color: #426478;
+}
+.login-btn-color{
+-fx-background-color: #212021;
+}
+
+.logoutbtn-image{
+-fx-background-image: url("logout_rounded_left_100px.png");
+-fx-background-repeat: stretch;
+-fx-background-size : 100 100;
+-fx-background-position: center center;
+}
+
+.admin-pane{
+-fx-background-image: url("adminimage.jpeg");
+-fx-background-repeat: stretch;
+-fx-background-size :721 465;
+
+-fx-background-position: center center;
+-fx-background-radius: 30;
+
+
+}
+///////
+.btn{
+-fx-font-veight: bold;
+-fx-background-color: #2196f3;
+-fx-background-radius:22;
+-fx-text-fill: white;
+}
+
+
+.btn-hover:hover{
+-fx-font-veight:bold;
+-fx-background-color:white;
+-fx-background-radius:22;
+-fx-font-size:16;
+-fx-text-fill:#2196f3;
+-fx-border-color:#2196f3;
+-fx-border-radius:20;
+-fx-border-vidth:3;
+}
+
+.btn-pressed:pressed{
+-fx-font-veight:bold;
+-fx-background-color:white;
+-fx-background-radius:22;
+-fx-font-size:16;
+-fx-text-fill:#2196f3;
+-fx-border-color:#2196f3;
+-fx-border-radius:20;
+-fx-border-vidth:3;
+-fx-rotate:10;
+
+}
+
+
+
+////////////
+
+
+.loding{
+-fx-background-image: url("loadingimage.jpeg");
+-fx-background-repeat: stretch;
+-fx-background-size :721 465;
+
+-fx-background-position: center center;
+-fx-background-radius: 30;
+}
+
+//////
+
+.admin{
+-fx-background-radius: 30;
+}
+
+.admin-panehover:hover{
+-fx-background-color:#10b0a0;
+
+
+}
+
+
+.xelcome{
+
+-fx-background-image: url("welcome.jpeg");
+-fx-background-repeat: stretch;
+-fx-background-size :960 700;
+
+-fx-background-position: center center;
+-fx-background-radius: 30;
+
+}
+
+
+.deleteAndaccept:hover{
+-fx-background-color: #245b6b;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+.table-row-cell:odd{
+    -fx-background-color: #a8b0b3;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+.table-row-cell:even{
+    -fx-background-color: #245b6b;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+.Back:hover{
+-fx-background-color: #a8b0b3;
+}
+.ViewMssg:hover{
+-fx-background-color: #f52f8e;
+}
+.Parent {
+    -fx-background-color: #96627e;
+}
+
+.view_report{
+-fx-background-image: url("view_40px.png");
+-fx-background-repeat: stretch;
+-fx-background-size :40 40;
+-fx-background-position: center center;
+-fx-background-radius: 30;
+
+}

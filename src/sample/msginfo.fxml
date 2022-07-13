@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="msginfopane" prefHeight="430.0" prefWidth="363.0" style="-fx-background-color: #00002C;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.msginfoController">
+   <children>
+      <Label layoutX="14.0" layoutY="53.0" prefHeight="30.0" prefWidth="63.0" text="From :" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="from" layoutX="97.0" layoutY="53.0" prefHeight="30.0" prefWidth="252.0" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="108.0" prefHeight="30.0" prefWidth="84.0" text="Supject :" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="supject" layoutX="97.0" layoutY="108.0" prefHeight="30.0" prefWidth="252.0" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="14.0" text="Message information" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="158.0" prefHeight="30.0" prefWidth="84.0" text="Content :" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="content" editable="false" layoutX="20.0" layoutY="200.0" prefHeight="154.0" prefWidth="323.0" />
+      <JFXButton layoutX="130.0" layoutY="377.0" onAction="#reply" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" stylesheets="@style.css" text="Reply" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="mouse-clicked" />
+            <String fx:value="mouse-moved" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</AnchorPane>

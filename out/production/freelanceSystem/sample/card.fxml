@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="cardlayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-border-radius: 10; -fx-border-color: #000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.cardController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="166.0" prefWidth="272.0" style="-fx-background-radius: 20;">
+         <children>
+            <ImageView fx:id="cardimage" fitHeight="98.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="cardname" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="277.0" style="-fx-background-radius: 20;" text="the name">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="showcard" onAction="#showinfo" prefHeight="21.0" prefWidth="155.0" stylesheets="@style.css" text="show" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="4.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Book Antiqua Bold" size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="inside-btn-color" />
+                  <String fx:value="inside-btn" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</HBox>

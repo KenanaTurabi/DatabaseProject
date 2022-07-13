@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #00002C; -fx-background-radius: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="243.0" style="-fx-background-color: #13123A; -fx-background-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="957.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="11.0" layoutY="14.0" prefHeight="78.0" prefWidth="220.0" style="-fx-background-color: #13123A;" AnchorPane.bottomAnchor="608.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="14.0" prefHeight="37.0" prefWidth="193.0" text="Freelance Manegment System" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXButton fx:id="profilebtn" layoutY="101.0" onAction="#showprofilepane" prefHeight="57.0" prefWidth="243.0" stylesheets="@style.css" text="Profile" textFill="WHITE" AnchorPane.bottomAnchor="542.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="101.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="32.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+            </JFXButton>
+            <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="21.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="336.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="181.0" AnchorPane.topAnchor="112.0">
+               <image>
+                  <Image url="@prfileicon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="logoutbtn" layoutX="74.0" layoutY="596.0" onAction="#logout" prefHeight="78.0" prefWidth="94.0" stylesheets="@style.css" text=" " textFill="WHITE" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="596.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="32.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="logoutbtn-image" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="addservicebtn" layoutY="274.0" onAction="#openaddservice" prefHeight="57.0" prefWidth="243.0" stylesheets="@style.css" text="Add service" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="31.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="security" layoutX="2.0" layoutY="215.0" onAction="#opensecuritypane" prefHeight="57.0" prefWidth="243.0" stylesheets="@style.css" text="Security      " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="32.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@security_user_female_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="openbuypane" layoutX="1.0" layoutY="158.0" onAction="#showbuypane" prefHeight="57.0" prefWidth="243.0" stylesheets="@style.css" text="Buy Services" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="29.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@buy_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="profilebtn1" layoutX="2.0" layoutY="331.0" onAction="#opencartpane" prefHeight="57.0" prefWidth="243.0" stylesheets="@style.css" text="My Cart   " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="34.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@shopping_cart_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="profilebtn11" layoutX="2.0" layoutY="392.0" onAction="#openmsgpane" prefHeight="65.0" prefWidth="243.0" stylesheets="@style.css" text="Messages  " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="34.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@group_message_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="457.0" onAction="#opensendmsgspane" prefHeight="65.0" prefWidth="243.0" stylesheets="@style.css" text="Send Message" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="26.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@send_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutY="522.0" onAction="#openorderpane" prefHeight="65.0" prefWidth="243.0" stylesheets="@style.css" text="My Order " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="33.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@purchase_order_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profilepane" layoutX="245.0" prefHeight="686.0" prefWidth="908.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="-7.0">
+         <children>
+            <ImageView fx:id="profilephoto" fitHeight="150.0" fitWidth="200.0" layoutX="405.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user_48px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="6.0" layoutY="14.0" prefHeight="17.0" prefWidth="516.0" text="Profile Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <JFXButton fx:id="choosefromfile" layoutX="429.0" layoutY="205.0" onAction="#choosefromfile" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="choose from file" textFill="WHITE" />
+            <Label fx:id="imageinfo" layoutX="555.0" layoutY="209.0" prefHeight="17.0" prefWidth="156.0" textFill="RED">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="198.0" prefHeight="27.0" prefWidth="150.0" text="Profile Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox layoutX="272.0" layoutY="259.0" prefHeight="30.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="102.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="profilename" alignment="CENTER" editable="false" prefHeight="28.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="267.0" layoutY="297.0" prefHeight="30.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="30.0" prefWidth="102.0" text="Date Of Birth" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="db" alignment="CENTER" editable="false" prefHeight="28.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="267.0" layoutY="343.0" prefHeight="25.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="102.0" text="Gender" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="gender" alignment="CENTER" editable="false" prefHeight="6.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-9.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="267.0" layoutY="421.0" prefHeight="25.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="102.0" text="Email" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-13.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="267.0" layoutY="382.0" prefHeight="25.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="102.0" text="phone Number" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phone" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-14.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="267.0" layoutY="459.0" prefHeight="25.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="102.0" text="ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="id" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-15.0" />
+               </padding>
+            </HBox>
+            <JFXButton fx:id="save" layoutX="437.0" layoutY="509.0" onAction="#saveprofile" prefHeight="20.0" prefWidth="87.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="save changes" textFill="WHITE" />
+            <JFXButton fx:id="editbtn" layoutX="633.0" layoutY="262.0" onAction="#edit" prefHeight="20.0" prefWidth="87.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="Edit" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@edit_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="buypane" layoutX="245.0" prefHeight="665.0" prefWidth="908.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <Label layoutY="30.0" prefHeight="37.0" prefWidth="168.0" text="Buy a service" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="27.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutY="102.0" prefHeight="37.0" prefWidth="523.0" text="Categories :" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="27.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <VBox layoutX="187.0" layoutY="172.0" prefHeight="154.0" prefWidth="208.0">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@programming.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <JFXButton fx:id="programingbtn" onAction="#openprogramming" prefHeight="40.0" prefWidth="191.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="programming" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <ImageView fitHeight="37.0" fitWidth="55.0" layoutX="169.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@buy_100px.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="530.0" layoutY="172.0" prefHeight="134.0" prefWidth="168.0">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@vedioproduct.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <JFXButton fx:id="videoproductionbtn" onAction="#openvedio" prefHeight="18.0" prefWidth="209.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="Video Production" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="11.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="192.0" layoutY="345.0" prefHeight="130.0" prefWidth="199.0">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@transelate.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <JFXButton fx:id="translatebtn" onAction="#opentranslate" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="Translate" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="530.0" layoutY="346.0" prefHeight="134.0" prefWidth="168.0">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@fashion.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <JFXButton fx:id="fashionbtn" onAction="#openfashion" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="Fashion Design" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="securitypane" layoutX="245.0" prefHeight="700.0" prefWidth="908.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" prefHeight="30.0" prefWidth="507.0" text="Security Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="74.0" prefHeight="37.0" prefWidth="507.0" text="Change User Password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="103.0" layoutY="154.0" prefHeight="25.0" prefWidth="360.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="123.0" text="Email" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email1" alignment="CENTER" prefHeight="25.0" prefWidth="240.0" promptText="Enter your Email" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-13.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="105.0" layoutY="210.0" prefHeight="25.0" prefWidth="360.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="123.0" text="code" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="code" alignment="CENTER" prefHeight="25.0" prefWidth="240.0" promptText="Enter the code from Email" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-13.0" />
+               </padding>
+            </HBox>
+            <JFXButton fx:id="sendcode" layoutX="490.0" layoutY="158.0" onAction="#sendcodetoemail" prefHeight="20.0" prefWidth="87.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="send code" textFill="WHITE" />
+            <Label fx:id="codenotcorrect" layoutX="534.0" layoutY="213.0" prefHeight="20.0" prefWidth="208.0" textFill="RED" />
+            <HBox alignment="CENTER" layoutX="105.0" layoutY="465.0" prefHeight="25.0" prefWidth="360.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="123.0" text="New Password" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="newpass" alignment="CENTER" prefHeight="25.0" prefWidth="240.0" promptText="Enter  new password" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-13.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="105.0" layoutY="531.0" prefHeight="25.0" prefWidth="360.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="123.0" text="confirm password" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="confirmnewpass" alignment="CENTER" prefHeight="25.0" prefWidth="240.0" promptText="Enter the password agian" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;" />
+               </children>
+               <padding>
+                  <Insets top="-13.0" />
+               </padding>
+            </HBox>
+            <Pane layoutX="105.0" layoutY="262.0" prefHeight="154.0" prefWidth="516.0" style="-fx-border-color: #fff;">
+               <children>
+                  <JFXTextArea editable="false" prefHeight="154.0" prefWidth="516.0" style="-fx-text-inner-color: #fff;" text="To make your password stronger :&#10;&#10;*Add uppercase letters&#10;*Add numbers&#10;*Add punctuation&#10;&#10;">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </Pane>
+            <JFXButton fx:id="savepass" layoutX="497.0" layoutY="563.0" prefHeight="20.0" prefWidth="87.0" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="save" textFill="WHITE" />
+            <ImageView fx:id="codetruefalse" fitHeight="40.0" fitWidth="30.0" layoutX="475.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="emailtruefalse" fitHeight="40.0" fitWidth="30.0" layoutX="475.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="emailtruefalse1" fitHeight="40.0" fitWidth="30.0" layoutX="473.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="programmingpane" layoutX="245.0" layoutY="8.0" prefHeight="692.0" prefWidth="952.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="431.0" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="31.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="14.0" layoutY="49.0" prefHeight="195.0" prefWidth="938.0" style="-fx-background-color: #13123A;">
+               <content>
+                  <HBox fx:id="progitems" prefHeight="183.0" prefWidth="1202.0" style="-fx-background-color: #13123A;" />
+               </content>
+            </ScrollPane>
+            <AnchorPane fx:id="showpan" layoutX="309.0" layoutY="244.0" prefHeight="447.0" prefWidth="325.0" style="-fx-background-color: #13123A;" AnchorPane.topAnchor="247.0">
+               <children>
+                  <Label fx:id="showinfoname" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="118.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="118.0" prefHeight="33.0" prefWidth="61.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfoprice" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="175.0" prefHeight="33.0" prefWidth="220.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="175.0" prefHeight="33.0" prefWidth="61.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="225.0" prefHeight="33.0" prefWidth="61.0" text="Disc." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="showinfodisc" layoutX="68.0" layoutY="218.0" prefHeight="77.0" prefWidth="262.0" style="-fx-text-inner-color: #ff0000;" />
+                  <JFXButton layoutX="136.0" layoutY="376.0" onAction="#buy" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #121110;" stylesheets="@style.css" text="Buy" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="inside-btn" />
+                        <String fx:value="inside-btn-color" />
+                     </styleClass>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="172.0" prefHeight="39.0" prefWidth="28.0" text="\$" textFill="#1aab00">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfotime" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="321.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="321.0" prefHeight="33.0" prefWidth="61.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="showsen" layoutX="285.0" layoutY="376.0" onAction="#showsendmsg" prefHeight="40.0" prefWidth="45.0" styleClass="send_msgBtn" stylesheets="@style.css" text=" " />
+                  <ImageView fx:id="showimgfromcard" fitHeight="116.0" fitWidth="308.0" layoutX="18.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addservicepane" layoutX="245.0" prefHeight="700.0" prefWidth="908.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="717.0" text="Add new service" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="31.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="cardimage" fitHeight="150.0" fitWidth="200.0" layoutX="379.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image_30px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="choosefromfile2" layoutX="403.0" layoutY="218.0" onAction="#choosefromfile1" style="-fx-background-color: #13123A; -fx-background-radius: 30;" text="choose from file" textFill="WHITE" />
+            <Label fx:id="imageinfo1" layoutX="541.0" layoutY="274.0" prefHeight="17.0" prefWidth="156.0" textFill="RED">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="37.0" layoutY="274.0" prefHeight="30.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="30.0" prefWidth="102.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="sname" prefHeight="28.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="37.0" layoutY="332.0" prefHeight="30.0" prefWidth="589.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="30.0" prefWidth="102.0" text="Discription" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="sdisc" prefHeight="28.0" prefWidth="475.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="37.0" layoutY="387.0" prefHeight="30.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="30.0" prefWidth="102.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="sprice" prefHeight="28.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="37.0" layoutY="445.0" prefHeight="30.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="30.0" prefWidth="102.0" text="Time to finish" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="stime" prefHeight="28.0" prefWidth="213.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="37.0" layoutY="501.0" prefHeight="30.0" prefWidth="325.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="30.0" prefWidth="102.0" text="Categories" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXComboBox fx:id="categories" prefHeight="25.0" prefWidth="209.0" />
+               </children>
+            </HBox>
+            <JFXButton layoutX="428.0" layoutY="588.0" onAction="#addservice" prefHeight="59.0" prefWidth="87.0" styleClass="addnewservicebtn-image" stylesheets="@style.css" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="translatepane" layoutX="254.0" layoutY="8.0" prefHeight="694.0" prefWidth="952.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <ScrollPane layoutX="14.0" layoutY="49.0" prefHeight="195.0" prefWidth="938.0" style="-fx-background-color: #13123A;">
+               <content>
+                  <HBox fx:id="translateitems" prefHeight="195.0" prefWidth="1259.0" style="-fx-background-color: #13123A;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="431.0" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="31.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="showpane" layoutX="309.0" layoutY="244.0" prefHeight="447.0" prefWidth="325.0" style="-fx-background-color: #13123A;" AnchorPane.topAnchor="247.0">
+               <children>
+                  <Label fx:id="showinfoname1" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="122.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="122.0" prefHeight="33.0" prefWidth="61.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfoprice1" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="179.0" prefHeight="33.0" prefWidth="220.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="179.0" prefHeight="33.0" prefWidth="61.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="229.0" prefHeight="33.0" prefWidth="61.0" text="Disc." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="showinfodisc1" layoutX="76.0" layoutY="222.0" prefHeight="77.0" prefWidth="262.0" style="-fx-text-inner-color: #ff0000;" />
+                  <JFXButton layoutX="136.0" layoutY="376.0" onAction="#buy" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #121110;" stylesheets="@style.css" text="Buy" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="inside-btn" />
+                        <String fx:value="inside-btn-color" />
+                     </styleClass>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="176.0" prefHeight="39.0" prefWidth="28.0" text="\$" textFill="#1aab00">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfotime1" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="325.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="325.0" prefHeight="33.0" prefWidth="61.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="showsend" layoutX="285.0" layoutY="376.0" onAction="#showsendmsg" prefHeight="40.0" prefWidth="45.0" styleClass="send_msgBtn" stylesheets="@style.css" text=" " />
+                  <ImageView fx:id="showimgfromcard1" fitHeight="116.0" fitWidth="342.0" layoutX="3.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vediopane" layoutX="245.0" layoutY="14.0" prefHeight="686.0" prefWidth="956.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <ScrollPane layoutX="18.0" layoutY="49.0" prefHeight="195.0" prefWidth="938.0" style="-fx-background-color: #13123A;">
+               <content>
+                  <HBox fx:id="vedioproductionitems" prefHeight="195.0" prefWidth="1251.0" style="-fx-background-color: #13123A;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="17.0" prefWidth="431.0" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="31.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="showpane1" layoutX="275.0" layoutY="244.0" prefHeight="447.0" prefWidth="325.0" style="-fx-background-color: #13123A;" AnchorPane.topAnchor="247.0">
+               <children>
+                  <Label fx:id="showinfoname2" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="125.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="125.0" prefHeight="33.0" prefWidth="61.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfoprice2" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="182.0" prefHeight="33.0" prefWidth="220.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="182.0" prefHeight="33.0" prefWidth="61.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="232.0" prefHeight="33.0" prefWidth="61.0" text="Disc." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="showinfodisc2" layoutX="76.0" layoutY="225.0" prefHeight="77.0" prefWidth="262.0" style="-fx-text-inner-color: #ff0000;" />
+                  <JFXButton layoutX="136.0" layoutY="376.0" onAction="#buy" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #121110;" stylesheets="@style.css" text="Buy" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="inside-btn" />
+                        <String fx:value="inside-btn-color" />
+                     </styleClass>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="179.0" prefHeight="39.0" prefWidth="28.0" text="\$" textFill="#1aab00">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfotime2" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="328.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="328.0" prefHeight="33.0" prefWidth="61.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="showsend1" layoutX="285.0" layoutY="376.0" onAction="#showsendmsg" prefHeight="40.0" prefWidth="45.0" styleClass="send_msgBtn" stylesheets="@style.css" text=" " />
+                  <ImageView fx:id="showimgfromcard2" fitHeight="126.0" fitWidth="335.0" layoutX="8.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="fashionpane" layoutX="245.0" layoutY="14.0" prefHeight="686.0" prefWidth="956.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <ScrollPane layoutX="18.0" layoutY="49.0" prefHeight="195.0" prefWidth="938.0" style="-fx-background-color: #13123A;">
+               <content>
+                  <HBox fx:id="fashionitems" prefHeight="195.0" prefWidth="1251.0" style="-fx-background-color: #13123A;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="17.0" prefWidth="431.0" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="31.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="559.0" layoutY="57.0" prefHeight="285.0" prefWidth="397.0" />
+            <AnchorPane fx:id="showpane11" layoutX="313.0" layoutY="244.0" prefHeight="447.0" prefWidth="325.0" style="-fx-background-color: #13123A;" AnchorPane.topAnchor="247.0">
+               <children>
+                  <Label fx:id="showinfoname21" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="131.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="131.0" prefHeight="33.0" prefWidth="61.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfoprice21" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="188.0" prefHeight="33.0" prefWidth="220.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="188.0" prefHeight="33.0" prefWidth="61.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="238.0" prefHeight="33.0" prefWidth="61.0" text="Disc." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="showinfodisc21" layoutX="76.0" layoutY="231.0" prefHeight="77.0" prefWidth="262.0" style="-fx-text-inner-color: #ff0000;" />
+                  <JFXButton layoutX="136.0" layoutY="376.0" onAction="#buy" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #121110;" stylesheets="@style.css" text="Buy" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="inside-btn" />
+                        <String fx:value="inside-btn-color" />
+                     </styleClass>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="185.0" prefHeight="39.0" prefWidth="28.0" text="\$" textFill="#1aab00">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showinfotime21" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="334.0" prefHeight="33.0" prefWidth="262.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="334.0" prefHeight="33.0" prefWidth="61.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="showsend11" layoutX="285.0" layoutY="376.0" onAction="#showsendmsg" prefHeight="40.0" prefWidth="45.0" styleClass="send_msgBtn" stylesheets="@style.css" text=" " />
+                  <ImageView fx:id="showimgfromcard3" fitHeight="126.0" fitWidth="342.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="notification" layoutX="245.0" prefHeight="700.0" prefWidth="908.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <TableView layoutX="49.0" layoutY="109.0" prefHeight="483.0" prefWidth="863.0">
+              <columns>
+                <TableColumn prefWidth="125.0" text="Notification title" />
+                <TableColumn prefWidth="79.0" text="From" />
+                  <TableColumn prefWidth="658.0" text="content" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cartpane" layoutX="245.0" prefHeight="700.0" prefWidth="912.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="589.0" text="My cart " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="32.0" />
+               </font>
+            </Label>
+            <TableView fx:id="carttable" layoutX="40.0" layoutY="80.0" prefHeight="489.0" prefWidth="863.0">
+              <columns>
+                <TableColumn fx:id="servicename" minWidth="8.0" prefWidth="182.0" text="Service name" />
+                  <TableColumn fx:id="serviceprice" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="servicebuydate" prefWidth="75.0" text="Buy date" />
+                  <TableColumn fx:id="serviceuserid" prefWidth="75.0" text="User id" />
+                  <TableColumn fx:id="serviceuseremail" prefWidth="254.0" text="User email" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="msgpane" layoutX="245.0" prefHeight="700.0" prefWidth="891.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="431.0" text="MY Messages " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="msgstable" editable="true" layoutX="26.0" layoutY="127.0" prefHeight="419.0" prefWidth="908.0">
+              <columns>
+                <TableColumn fx:id="fromcol" prefWidth="124.0" text="From" />
+                <TableColumn fx:id="subjectcol" prefWidth="177.0" text="Subject" />
+                  <TableColumn fx:id="contentcol" prefWidth="606.0" text="Content" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="179.0" layoutY="604.0" onAction="#deletefrommsgtable" prefHeight="33.0" prefWidth="102.0" stylesheets="@style.css" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+                  <String fx:value="inside-btn-color" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="674.0" layoutY="610.0" onAction="#replymsg" prefHeight="33.0" prefWidth="102.0" stylesheets="@style.css" text="Reply" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="19.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="mouse-clicked" />
+                  <String fx:value="inside-btn-color" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sendmsgspane" layoutX="245.0" prefHeight="700.0" prefWidth="908.0" style="-fx-background-radius: 20; -fx-background-color: #00002C;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="367.0" text="Send new Message" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="198.0" layoutY="181.0" prefHeight="17.0" prefWidth="156.0" text="To :" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="37.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tomsg" alignment="CENTER" layoutX="366.0" layoutY="194.0" prefHeight="28.0" prefWidth="381.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="198.0" layoutY="285.0" prefHeight="17.0" prefWidth="156.0" text="Subject :" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="37.0" />
+               </font>
+            </Label>
+            <TextField fx:id="subjectmsg" alignment="CENTER" layoutX="366.0" layoutY="292.0" prefHeight="28.0" prefWidth="381.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 1 0; -fx-border-color: #242551; -fx-text-inner-color: #fff;">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="198.0" layoutY="391.0" prefHeight="17.0" prefWidth="156.0" text="Content :" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="37.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="contentmsg" layoutX="366.0" layoutY="401.0" prefHeight="175.0" prefWidth="537.0" style="-fx-text-inner-color: #fff;" />
+            <JFXButton layoutX="480.0" layoutY="600.0" onAction="#sendmsg" prefHeight="78.0" prefWidth="142.0" styleClass="send_msgBtn1" stylesheets="@style.css" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="welcome" layoutX="254.0" layoutY="22.0" prefHeight="665.0" prefWidth="871.0" styleClass="xelcome" stylesheets="@style.css" visible="false" />
+      <JFXButton fx:id="canclebtn" layoutX="1157.0" layoutY="14.0" onAction="#close" prefHeight="25.0" prefWidth="28.0" styleClass="sendMsg-closeBtn" stylesheets="@style.css" text=" " />
+      <AnchorPane fx:id="orderpane" layoutX="245.0" prefHeight="700.0" prefWidth="912.0" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="409.0" text="My Order" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="39.0" />
+               </font>
+            </Label>
+            <TableView fx:id="order_tableview" layoutX="68.0" layoutY="75.0" prefHeight="527.0" prefWidth="824.0">
+              <columns>
+                <TableColumn fx:id="order_id" prefWidth="75.0" text="Order ID" />
+                <TableColumn fx:id="order_time" prefWidth="152.0" text="Order Time" />
+                  <TableColumn fx:id="order_date" prefWidth="164.0" text="Order Date" />
+                  <TableColumn fx:id="customer_id" prefWidth="76.0" text="Customer ID" />
+                  <TableColumn fx:id="service_id" prefWidth="79.0" text="Service ID" />
+                  <TableColumn fx:id="service_name" prefWidth="190.0" text="Service Name" />
+                  <TableColumn fx:id="service_price" minWidth="0.0" prefWidth="87.0" text="Service Price" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

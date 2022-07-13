@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="709.0" styleClass="addnewserv-image" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminController">
+    <children>
+        <AnchorPane fx:id="Adminpane" prefHeight="200.0" prefWidth="200.0" styleClass="admin-pane" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane prefHeight="311.0" prefWidth="620.0" style="-fx-background-image: url(&quot;Admin.jpg&quot;);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #949193;" BorderPane.alignment="CENTER">
+                            <children>
+                                <Pane layoutX="97.0" layoutY="20.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #4a0e33;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                <Label fx:id="Menu" layoutX="30.0" layoutY="34.0" text=" MENU" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="36.0">
+                                    <graphic>
+                                        <ImageView fx:id="imge" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@icons8-menu-50.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font size="26.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="MenuClose" layoutX="30.0" layoutY="34.0" text=" MENU" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="561.0" AnchorPane.topAnchor="36.0">
+                                    <graphic>
+                                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@icons8-menu-50.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font size="26.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane fx:id="slider" prefHeight="362.0" prefWidth="176.0" style="-fx-background-color: #4a0e33;" styleClass="admin-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <VBox layoutX="25.0" layoutY="82.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                                    <children>
+                                        <JFXButton fx:id="UserInfoButton" onAction="#OpenUserInfo" prefHeight="38.0" prefWidth="176.0" styleClass="admin-panehover" stylesheets="@style.css" text=" User Info" textFill="#949193">
+                                            <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@icons8-user-groups-50.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton prefHeight="38.0" prefWidth="176.0" styleClass="admin-panehover" stylesheets="@style.css" text=" Messages" textFill="#949193">
+                                            <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="icons8-chat-room-50.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton fx:id="req_button" onAction="#OpenReq_pane" prefHeight="38.0" prefWidth="176.0" styleClass="admin-panehover" stylesheets="@style.css" text=" Requests" textFill="#949193">
+                                            <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@icons8-add-administrator-50.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton prefHeight="38.0" prefWidth="176.0" styleClass="admin-panehover" stylesheets="@style.css" text=" Back" textFill="#949193">
+                                            <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@icons8-go-back-64.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="337.0" prefWidth="628.0" styleClass="admin-pane" stylesheets="@style.css" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="UserInfoTblPane" layoutX="-1.0" prefHeight="400.0" prefWidth="700.0" stylesheets="@style.css" visible="false">
+            <children>
+                <ImageView fitHeight="496.0" fitWidth="731.0" layoutX="-7.0" layoutY="-19.0" opacity="0.59" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-16.0" AnchorPane.topAnchor="-19.0">
+                    <image>
+                        <Image url="@app.jpg" />
+                    </image>
+                </ImageView>
+                <TableView fx:id="UserTable" layoutX="21.0" layoutY="42.0" prefHeight="366.0" prefWidth="667.0" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="Id" prefWidth="38.0" text="ID" />
+                        <TableColumn prefWidth="136.0" text="Name">
+                            <columns>
+                                <TableColumn fx:id="Fname" prefWidth="65.0" text="First" />
+                                <TableColumn fx:id="Lname" prefWidth="64.0" text="Last" />
+                            </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="Email" prefWidth="150.0" text="Email" />
+                        <TableColumn fx:id="Pnumber" prefWidth="75.0" text="Phone#" />
+                        <TableColumn fx:id="DB" prefWidth="94.0" text="Date of Birth" />
+                        <TableColumn fx:id="Sex" prefWidth="46.0" text="Sex" />
+                        <TableColumn fx:id="Emoney" prefWidth="134.0" text="Earned Money" />
+                    </columns>
+                    <styleClass>
+                        <String fx:value="table-view" />
+                        <String fx:value="table-row-cell" />
+                    </styleClass>
+                </TableView>
+                <JFXButton fx:id="userinfoback" layoutX="568.0" layoutY="423.0" onAction="#OpenAdminPane" prefHeight="26.0" prefWidth="126.0" style="-fx-background-radius: 10;" styleClass="Back" stylesheets="@style.css" text="Back" textFill="#f5f5f5">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons8-go-back-64.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+            <styleClass>
+                <String fx:value="table-row-cell" />
+                <String fx:value="table-view" />
+            </styleClass>
+        </AnchorPane>
+        <AnchorPane fx:id="Req_pane" layoutX="-3.0" prefHeight="458.0" prefWidth="716.0" stylesheets="@style.css" visible="false">
+            <children>
+                <ImageView fitHeight="477.0" fitWidth="723.0" layoutX="1.0" layoutY="-12.0" onDragDetected="#deleteRowFromTable" opacity="0.43" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="app.jpg" />
+                    </image>
+                </ImageView>
+                <TableView fx:id="Req_tbl" layoutX="32.0" layoutY="45.0" prefHeight="339.0" prefWidth="667.0" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="sur_name_col" prefWidth="115.0" text="Survice Name" />
+                        <TableColumn fx:id="desc_col" prefWidth="213.0" text="Description" />
+                        <TableColumn fx:id="s_id_col" minWidth="3.0" prefWidth="44.0" text="S_id" />
+                        <TableColumn fx:id="user_id_col" minWidth="4.0" prefWidth="51.0" text="user_id" />
+                        <TableColumn fx:id="price_col" prefWidth="43.0" text="price" />
+                        <TableColumn fx:id="Period_col" prefWidth="223.0" text="period of time to finish the sur." />
+                    </columns>
+                    <styleClass>
+                        <String fx:value="table-row-cell" />
+                        <String fx:value="table-view" />
+                    </styleClass>
+                </TableView>
+                <JFXButton layoutX="121.0" layoutY="406.0" onAction="#deleteRowFromTable" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" styleClass="deleteAndaccept" stylesheets="@style.css" text="Delete Selected Row (Service)" textFill="#f5f3f3">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton layoutX="365.0" layoutY="408.0" prefHeight="30.0" prefWidth="230.0" style="-fx-background-radius: 10;" styleClass="deleteAndaccept" stylesheets="@style.css" text="Accept Selected Row (Service)" textFill="#f5f5f5">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton layoutX="606.0" layoutY="406.0" onAction="#BackT0AdminPane" style="-fx-background-radius: 10;" styleClass="Back" stylesheets="@style.css" text="Back">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons8-go-back-64.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
